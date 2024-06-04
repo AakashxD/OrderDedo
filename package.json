@@ -11,5 +11,8 @@
     "url": "git+https://github.com/AakashxD/react.git"
   },
   "author": "Aakash Singh",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
 }
