@@ -42,3 +42,9 @@ cdn link are not good way to use react
 - // use ()when multiple line jsx
 // Babel is a JS Complier
 - jsx senitize data malicious(api example)
+
+ # lecture 4
+ - props pasing an argument to function 
+ - config drivin UI
+controlling  UI for Backend (data API ) ex- carousel
+array.join(" , "); to seprate betwee the value of array 
