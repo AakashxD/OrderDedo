@@ -48,3 +48,25 @@ cdn link are not good way to use react
  - config drivin UI
 controlling  UI for Backend (data API ) ex- carousel
 array.join(" , "); to seprate betwee the value of array 
+- key 
+unique id>> index key >> not using key 
+ # lecture 5 
+ two typess of exports 
+ default and name
+-  export default {<name>}
+- export const <componenets>
+ for this
+ import { <Name >} from '<path>'
+- ex can we use default and name exports at once 
+# REact hooks
+(Noraml Js UTility function)
+- useState()
+   superpowerfull react variable
+   # when state variable updates  react renders my components 
+- useEffect()
+# Reconciliation algorithum( React fiber)
+   changing in ui 7 res card to 3 
+  -   res-container 
+          |
+      virtual Dom - representation of actual dom (div,img,) 
+      div algorithum 

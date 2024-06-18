@@ -1,8 +1,9 @@
-import RestaurantCard from "./ResturantCard";
-import { useState } from "react";
+import React, { useState } from "react";
+import RestaurantCard from "./ResturantCard"
 
- const reslist ={
-  "restaurants": [
+const Body = () => {
+  // local state variable 
+  const [ResList, setResList] = useState([
     {
       "info": {
         "id": "18579",
@@ -285,5 +286,28 @@ import { useState } from "react";
       }
     }
     
-  ]
-}
+  ]);
+
+  const handleFilter = () => {
+    const filtered = ResList.filter((res) => res.info.avgRating > 4);
+    setResList(filtered);
+  };
+
+  return (
+    <div className="body">
+      <div className="searchBar">
+        <input type="text" placeholder="Search" />
+        <button className="filter-btn" onClick={handleFilter}>
+          Filter Restaurants
+        </button>
+      </div>
+      <div className="res-container">
+        {ResList.map((restaurant) => (
+          <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Body;
