@@ -70,3 +70,14 @@ unique id>> index key >> not using key
           |
       virtual Dom - representation of actual dom (div,img,) 
       div algorithum 
+# shimmer UI
+# useState 
+local state variable 
+- whenever state variable update react triggers a reconciliation cycle (ren )
+
+
+#  2 types Routing  in wen page
+- client side Routing 
+(SINGLE PAGE NOT PETECHING ITS KUST LAOD)
+- Servere side Routing 
+( make a network cALL AND GET A .HTML AND LAOD IN TO ui)

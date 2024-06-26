@@ -1,7 +1,4 @@
-import RestaurantCard from "./ResturantCard";
-import { useState } from "react";
- const reslist ={
-  "restaurants": [
+const resList=[
     {
       "info": {
         "id": "18579",
@@ -285,4 +282,4 @@ import { useState } from "react";
     }
     
   ]
-}
+  export default resList;

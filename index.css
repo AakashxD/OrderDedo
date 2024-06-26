@@ -48,3 +48,18 @@
     padding-top: 2%;
     padding-bottom:2% ;
 }
+.footer{
+    display: flex;
+    justify-content: center;
+    border: 1px solid darkslateblue;
+}
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.shimmer-card{
+    padding:30px;
+    width: 200px;
+    height: 380px;
+    border: 2px solid black;
+}
