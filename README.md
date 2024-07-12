@@ -78,6 +78,8 @@ local state variable
 
 #  2 types Routing  in wen page
 - client side Routing 
-(SINGLE PAGE NOT PETECHING ITS KUST LAOD)
+(SINGLE PAGE NOT PETECHING ITS jUST LAOD)
 - Servere side Routing 
 ( make a network cALL AND GET A .HTML AND LAOD IN TO ui)
+# class Based Component
+  state is big object
