@@ -77,9 +77,23 @@ local state variable
 
 
 #  2 types Routing  in wen page
-- client side Routing 
+- client side Routing  
 (SINGLE PAGE NOT PETECHING ITS jUST LAOD)
 - Servere side Routing 
 ( make a network cALL AND GET A .HTML AND LAOD IN TO ui)
 # class Based Component
   state is big object
+# parent child Event in class component
+- 1st constructor is called
+- render is called
+- component DiD mount is called
+# Loads -> Api->Render 
+# better Loads->Render->API->REnder
+component loads very fast
+
+# batching dommanipulation
+
+# ComponentDidUpdate
+-With componentDidUpdate the method will be called when one of state or props is updated, or the parent component rerenders, so basically any time the component is rerendered. Instead of having a dependency update to trigger an effect you must manually compare the previous state/props value to the current state/props value
+
+# Chunking,code spilting and dynamic Bundling 

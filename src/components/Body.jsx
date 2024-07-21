@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from "react";
-import RestaurantCard from "./ResturantCard"
-import resList from "../utils/mockdata";
+import RestaurantCard from './ResturantCard'  
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
-import ResturantMenu from "./ResturantMenu"
+import ResturantMenu from './ResturantMenu';
+import useOnlineStatus from "../utils/useOnlineStatus";
+
 const Body = () => {
   // local state variable
-  const [ResList, setResList] = useState([]);
-  const [ResName, setResName] = useState("");
+  const [resList, setResList] = useState([]);
+  const [resName, setResName] = useState("");
 
   const handleFilter = () => {
-    const filtered = ResList.filter((res) => res.info.avgRating > 4);
+    const filtered = resList.filter((res) => res.info.avgRating > 4);
     setResList(filtered);
   };
-
+    
   useEffect(() => {
     fetchData();
   }, []);
@@ -25,7 +26,7 @@ const Body = () => {
       );
 
       const json = await data.json();
-      console.log(json);
+     
       const restaurants =
         json?.data?.cards?.find(
           (card) => card.card.card.gridElements?.infoWithStyle?.restaurants
@@ -37,13 +38,16 @@ const Body = () => {
   };
 
   const handleSearch = () => {
-    const filtered = ResList.filter((res) =>
-      res.info.name.toLowerCase().includes(ResName.toLowerCase())
+    const filtered = resList.filter((res) =>
+      res.info.name.toLowerCase().includes(resName.toLowerCase())
     );
     setResList(filtered);
   };
-
-  if (ResList.length === 0) {
+ const onlineStatus=useOnlineStatus();
+ if(onlineStatus===false){
+  return <h1> Oops your are offline ,please check your internet connection</h1>
+ }
+  if (resList.length === 0) {
     return <Shimmer />;
   }
 
@@ -53,7 +57,7 @@ const Body = () => {
         <input
           type="text"
           className="search"
-          value={ResName}
+          value={resName}
           onChange={(e) => setResName(e.target.value)}
         />
         <button onClick={handleSearch}>Search</button>
@@ -64,11 +68,12 @@ const Body = () => {
         </button>
       </div>
       <div className="res-container">
-        {ResList.map((restaurant) => (
-          <Link key={restaurant.info.id} to={`/restaurant/${restaurant.info.id}`}>
-            <RestaurantCard resData={restaurant} />
-          </Link>
-        ))}
+        {resList.map((restaurant) => (
+       
+       <Link   key={restaurant.info.id} to={"restaurants/"+restaurant.info.id}><RestaurantCard  resData={restaurant} /></Link>
+    
+   ))}
+       
       </div>
     </div>
   );

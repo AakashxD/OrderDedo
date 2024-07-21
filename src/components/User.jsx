@@ -3,6 +3,9 @@ import React, { useState } from 'react'
 const User = ({name}) => {
     const [Count ,setCount]=useState(0);
     const [Count2 ,setCount2]=useState(0);
+    useEffect(()=>{
+      // API CALL
+    })
   return (
       
     <div className='user-card'>
