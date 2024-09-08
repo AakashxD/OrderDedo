@@ -1,6 +1,7 @@
 import React from 'react'
 import UserClass from './UserClass';
 
+// <Usercontext.Consumer>
 
 const About = () => {
   return (

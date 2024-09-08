@@ -5,13 +5,15 @@ const RestaurantMenu = () => {
   const { resId } = useParams();
 
   const resInfo = useRestaurantMenu(resId);
-
+  console.log("HellOBIR")
+   console.log(resInfo);
   if (!resInfo) {
     return <Shimmer />;
   }
 
   const { name, cuisines, cloudinaryImageId, costForTwo, avgRating } =
     resInfo?.cards?.[2]?.card?.card?.info || {};
+
 
   return (
     <div className="menu">

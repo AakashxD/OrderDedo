@@ -97,3 +97,15 @@ component loads very fast
 -With componentDidUpdate the method will be called when one of state or props is updated, or the parent component rerenders, so basically any time the component is rerendered. Instead of having a dependency update to trigger an effect you must manually compare the previous state/props value to the current state/props value
 
 # Chunking,code spilting and dynamic Bundling 
+const grocery=lazy(()=>import)("path")
+# SASS n SCSS
+- not use in industury
+# material UI react component library 
+
+
+# lec 11
+Higher order Component 
+- takes a component and return a component
+
+# useContext 
+can we chain userContext inside userContext.provider 
