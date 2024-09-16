@@ -68,10 +68,10 @@ const Body = () => {
           Filter Restaurants
         </button>
       </div>
-      <div className="search p-4 m-4 flex items-center">
+      {/* <div className="search p-4 m-4 flex items-center">
            <label className="text text-black">USERNAME</label>
            <input className="border border-black p-2" value={loggedIn} onChange={(e)=>setUserName(e.target.value)}></input>
-      </div>
+      </div> */}
 
       </div>
       
