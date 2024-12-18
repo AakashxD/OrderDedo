@@ -74,7 +74,6 @@ const Body = () => {
       </div> */}
 
       </div>
-      
       <div className="res-container flex flex-wrap">
         {resList.map((restaurant) => (
        
